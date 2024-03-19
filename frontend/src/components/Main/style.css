@@ -1,0 +1,18 @@
+.main{
+    margin: 10px;
+    display: flex;
+    gap: 16px;
+    text-align: center;
+    justify-content:center;
+    margin-bottom: 10px;
+}
+.mainNight{
+    margin: 10px;
+    margin-bottom: 0;
+    display: flex;
+    gap: 16px;
+    text-align: center;
+    justify-content:center;
+    padding-bottom: 10px;
+    background-color: #303841;
+}

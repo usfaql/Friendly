@@ -1,0 +1,230 @@
+.contenter-profile-page{
+    display: flex;
+    min-height: 100vh;
+    max-height: fit-content;
+    padding-bottom: 25px;
+}
+
+.profile-info{
+    display: flex;
+    width: 25%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+}
+
+.profile-info-night{
+    display: flex;
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+
+    align-items: baseline;
+    text-align: center;
+}
+.post-content-profile{
+    
+    width: 50%;
+}
+
+.nav-bar-profile{
+    margin-top: 10px;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 7px 1px rgb(5, 5, 5, 0.3);
+    text-align: center;
+    place-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.nav-bar-profile-night{
+    margin-top: 10px;
+    width: 95%;
+    background-color: #3a4750;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 7px 1px rgb(5, 5, 5, 0.3);
+    text-align: center;
+    place-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+
+.container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    
+}
+
+.cover-image {
+    width: 80%;
+    border-radius: 7.5px;
+    height: 12vh;
+    margin-top: 1vh;
+}
+  
+  .user-image {
+    width: 54px;
+    position: absolute;
+    bottom: -2.5vh;
+    left: 50%;
+    border-radius: 27px;
+    transform: translateX(-50%);
+    border: 1px solid #00ADB5;
+}
+
+.nameUser{
+    font-weight: bold;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.id-user{
+    opacity: 0.5;
+}
+.container-info-profile{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn-open-profile{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:#00ADB5;
+    color:white;
+    border-radius:8px;
+    margin:1vh;
+    height:fit-content;
+    padding:1vh
+}
+
+
+.btn-logout-profile{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:#c7c7c7;
+    color:red;
+    font-weight: bold;
+    border-radius:8px;
+    margin:1vh;
+    height:fit-content;
+    padding:1vh
+}
+.btn-open-profile:hover{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(32, 49, 85);
+}
+
+.container-userinfo{
+    margin-top: 3.5vh;
+}
+
+.btn-down{
+    width:100%;
+    margin-left:10px;
+    border-radius:0 0 8px 8px;
+    border:0;
+    padding:5px;
+    color:#018b92;
+}
+
+.btn-down-night{
+    width:100%;
+    margin-left:10px;
+    border-radius:0 0 8px 8px;
+    border:0;
+    padding:5px;
+    color:white;
+    background-color: #3a4750;
+}
+
+.btn-up{
+    width:100%; 
+    margin-left:10px;
+    margin-top:10px; 
+    border-radius:8px 8px 0 0;
+    background-color: white;
+    padding:5px;
+    border:0;
+    color:#018b92;
+}
+
+.btn-up-night{
+    width:100%; 
+    margin-left:10px;
+    margin-top:10px; 
+    border-radius:8px 8px 0 0;
+    background-color: #3a4750;
+    padding:5px;
+    border:0;
+    color:white;
+}
+
+.profile-info-phone{
+    display: none;
+}
+
+.trundle-div{
+    width: 23%; 
+    height: 84vh; 
+    display: flex; 
+    flex-direction: column;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .profile-info{
+        display: none;
+    }
+    .trundle-div{
+        display: none;
+    }
+    .post-content-profile{
+        width: 100%;
+        padding: 2%;
+    }
+    .profile-info-phone{
+        display: block;
+    }
+    .nav-bar-profile-night{
+        width: 100%;
+    }
+    .nav-bar-profile{
+        width: 100%;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

@@ -1,0 +1,182 @@
+.main-edit{
+    display:flex;
+    height:82.4vh;
+    flex-direction:row;
+    justify-content:center;
+    place-content:center;
+    padding: 50px;
+    user-select: none;
+}
+.contener-edit-profile{ 
+    align-items: center;
+    text-align: center;
+    place-content: center;
+    justify-content: center;
+    place-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgb(0, 0, 0, 0.1);
+    width: 50%;
+
+    min-height: fit-content;
+    max-height: fit-content;
+}
+
+.contener-info-edit-main{
+    display:flex;
+    place-items:center;
+    margin:20px;
+    justify-content:center;
+}
+
+.contener-info-edit{
+    display:flex;
+    place-items:center;
+    justify-content:space-between;
+    min-height:20%;
+    margin:20px;
+    width:75%;
+}
+
+.img-name-info{
+    display:flex;
+     place-items:center;
+     justify-content:space-between;
+     gap:10px;
+}
+.contenter-image-add{
+    position: relative;
+    display: inline-block;
+}
+.image-profile{
+    width: 124px;
+    height: 124px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+
+
+.addImage{
+    position: absolute;
+    bottom: 3%;
+    right: 0; 
+    padding: 5px 10px;
+    background-color: #00adb5; 
+    color: #fff; 
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+
+#fileInput[type="file"]{
+    display: none;
+}
+
+.custom-file-input {
+    display: inline-block;
+    position: absolute;
+    bottom: 3%;
+    right: 0; 
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .custom-file-input span {
+    position: absolute;
+    bottom: 3%;
+    right: 0; 
+    padding: 5px 10px;
+    background-color: #00adb5; 
+    color: #fff; 
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+
+.addImage:hover{
+    background-color: #018b92;
+}
+
+.contenter-input{
+    display:flex;
+    flex-direction:column;
+    place-items:center;
+    gap:20px; 
+    justify-items:center;
+    justify-content:center;
+    height:50%
+}
+
+.label-and-input{
+    min-height:20%;
+    display:flex;
+    gap:20px
+}
+.label{
+    text-align:start;
+    color:gray
+}
+.input-edit{
+    border: 1px solid rgb(0, 0, 0,0.2);
+    border-radius: 4px;
+    height: 5vh;
+    margin: 1%;
+}
+
+.btn-open-profile{
+    border: none;
+}
+.btn-open-profile:hover{
+    background-color: #018b92;
+    cursor: pointer;
+}
+
+.btn-open-profile-block{
+    border: none;
+    cursor:not-allowed;
+}
+
+.label-and-input-bio{
+    width: 100%;
+    height: 30%;
+}
+.bio{
+    width: 45%;
+    height: 45%;
+    max-width: 90%;
+    max-height: 100%;
+}
+.gg-add-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px
+ }
+ .gg-add-r::after,
+ .gg-add-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 5px;
+    top: 8px;
+    left: 4px
+ }
+ .gg-add-r::after {
+    width: 2px;
+    height: 10px;
+    top: 4px;
+    left: 8px
+ }

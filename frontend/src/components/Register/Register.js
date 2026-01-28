@@ -162,7 +162,7 @@ const Register = ()=>{
                                     setAnError(true);
                                 }else{
                                     setAnError(false);
-                                    axios.post("https://friendly-29oc.onrender.com/users/register",
+                                    axios.post("https://friendly-delta.vercel.app/users/register",
                                     {firstName,lastName,email,gender,country,phoneNumber , dateBrith : day +"/" + month + "/" + year, password}).then((result)=>{
                                         navigate("/login");
                                     }).catch((err)=>{

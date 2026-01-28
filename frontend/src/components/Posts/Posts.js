@@ -55,8 +55,8 @@ function Posts() {
         
             const searchid = async()=>{
                 if(selected === "home"){
-                    axios.get(`https://friendly-29oc.onrender.com/posts/${post._id}/like`,config).then((result) => {
-                        axios.get(`https://friendly-29oc.onrender.com/users/follow/user/${userId}`,config).then((results) => {
+                    axios.get(`https://friendly-delta.vercel.app/posts/${post._id}/like`,config).then((result) => {
+                        axios.get(`https://friendly-delta.vercel.app/users/follow/user/${userId}`,config).then((results) => {
                            results.data.posts.sort(compareDates);
                            setDataFollowing(results.data.posts);
                        }).catch((err) => {
@@ -65,8 +65,8 @@ function Posts() {
 
                     });
                 }else{
-                    axios.get(`https://friendly-29oc.onrender.com/posts/${post._id}/like`,config).then((result) => {
-                        axios.get("https://friendly-29oc.onrender.com/posts",config).then((result) => {
+                    axios.get(`https://friendly-delta.vercel.app/posts/${post._id}/like`,config).then((result) => {
+                        axios.get("https://friendly-delta.vercel.app/posts",config).then((result) => {
                         setData(result.data.posts);
             
                     }).catch((err) => {

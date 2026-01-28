@@ -34,7 +34,7 @@ function MessagePage() {
   };
 
   useEffect(()=>{
-    axios.get(`https://friendly-29oc.onrender.com/users/${userId}`, config).then((result) => {
+    axios.get(`https://friendly-delta.vercel.app/users/${userId}`, config).then((result) => {
       setFollowing(result.data.user.following);
       setFollower(result.data.user.follower);
       console.log(result.data.user.following);
@@ -84,7 +84,7 @@ function MessagePage() {
     useEffect(()=>{
       setAllMessages([])
       if(toId){
-      axios.get(`https://friendly-29oc.onrender.com/users/message/${userId}/${toId}`, config).then((result)=>{
+      axios.get(`https://friendly-delta.vercel.app/users/message/${userId}/${toId}`, config).then((result)=>{
         setAllMessages(result.data.messages)
       }).catch((error)=>{
         console.error(error);

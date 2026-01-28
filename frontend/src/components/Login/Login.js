@@ -46,7 +46,7 @@ const Login = ()=>{
                         <div style={{width:"100%" ,marginBottom:"20px"}}>
                             <button className="btn-login" style={{padding:"10px"}}
                             onClick={()=>{
-                                axios.post("https://friendly-29oc.onrender.com/users/login", {email, password}).then((result)=>{
+                                axios.post("https://friendly-delta.vercel.app/users/login", {email, password}).then((result)=>{
                                     setIsLoggedIn(true);
                                     setUserId(result.data.userId);
                                     setToken(result.data.token);
@@ -62,13 +62,13 @@ const Login = ()=>{
 
                             <button className="btn-login-demo" style={{padding:"10px"}}
                             onClick={()=>{
-                                axios.post("https://friendly-29oc.onrender.com/users/login", {email :"usfaql@gmail.com", password :"1234@"}).then((result)=>{
+                                axios.post("https://friendly-delta.vercel.app/users/login", {email :"usfaql@gmail.com", password :"1234@"}).then((result)=>{
                                     setIsLoggedIn(true);
                                     setUserId(result.data.userId);
                                     setToken(result.data.token);
                                     localStorage.setItem("token", result.data.token);
                                     localStorage.setItem("userId", result.data.userId);
-                                    axios.put(`https://friendly-29oc.onrender.com/users/${result.data.userId}/status`,{isOnline : true}, {
+                                    axios.put(`https://friendly-delta.vercel.app/users/${result.data.userId}/status`,{isOnline : true}, {
                                         headers: { Authorization: `Bearer ${result.data.token}` }
                                       }).then((result) => {
                                       navigate("/");

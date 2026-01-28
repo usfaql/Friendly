@@ -42,7 +42,7 @@ function CreatePost() {
     };
     console.log("dataFollowing", dataFollowing);
     useEffect(()=>{
-        axios.get(`https://friendly-29oc.onrender.com/users/${userId}`, config).then((result) => {
+        axios.get(`https://friendly-delta.vercel.app/users/${userId}`, config).then((result) => {
             setImageUser(result.data.user.image);
         }).catch((err) => {
             
@@ -145,7 +145,7 @@ function CreatePost() {
                       },
                       () => {
                          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                            axios.post("https://friendly-29oc.onrender.com/posts/create", {content, author:userId, image: downloadURL},{
+                            axios.post("https://friendly-delta.vercel.app/posts/create", {content, author:userId, image: downloadURL},{
                             headers: {
                                 Authorization: `Bearer ${token}`
                             }}).then((result) => {
@@ -164,7 +164,7 @@ function CreatePost() {
                       }
                     );
                 }else{
-                    axios.post("https://friendly-29oc.onrender.com/posts/create", {content, author:userId, image:""},{
+                    axios.post("https://friendly-delta.vercel.app/posts/create", {content, author:userId, image:""},{
                         headers: {
                             Authorization: `Bearer ${token}`
                         }}).then((result) => {

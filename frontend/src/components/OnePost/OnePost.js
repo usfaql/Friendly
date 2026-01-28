@@ -26,7 +26,7 @@ function OnePost() {
 
   useEffect(()=>{
     
-    axios.get(`https://friendly-29oc.onrender.com/posts/search_2/${postId}`, config).then((result) => {
+    axios.get(`https://friendly-delta.vercel.app/posts/search_2/${postId}`, config).then((result) => {
       setPost(result.data.post);
       setCommentData(result.data.post.comments);
       setLikeArray(result.data.post.likes);
@@ -75,7 +75,7 @@ function OnePost() {
   };
   const searchid = () => {
     axios
-      .get(`https://friendly-29oc.onrender.com/posts/${post._id}/like`, config)
+      .get(`https://friendly-delta.vercel.app/posts/${post._id}/like`, config)
       .then((result) => {
         if(result.data.message === "Like Added"){
           setLikeArray([...likeArray, infoMe]);
@@ -259,7 +259,7 @@ function OnePost() {
             setInputComment(e.target.value);
           }}/>
           <button className="btn-send-comment" onClick={()=>{
-            axios.post(`https://friendly-29oc.onrender.com/posts/${post._id}/comment`, {"comment":inputComment}, config).then((result) => {
+            axios.post(`https://friendly-delta.vercel.app/posts/${post._id}/comment`, {"comment":inputComment}, config).then((result) => {
               setInputComment("");
               setCommentData([...commentData, {comment: inputComment,commenter: infoMe}]) 
             }).catch((err) => {

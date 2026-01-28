@@ -21,7 +21,7 @@ const Navbar = ()=>{
         headers: { Authorization: `Bearer ${token}` }
     };
     useEffect(()=>{
-        axios.get(`https://friendly-29oc.onrender.com/users/${userId}`,config).then((result) => {
+        axios.get(`https://friendly-delta.vercel.app/users/${userId}`,config).then((result) => {
             setImageUrl(result.data.user.image)
         }).catch((err) => {
                 console.error(err);

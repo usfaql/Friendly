@@ -41,7 +41,7 @@ function EditProfile() {
       headers: { Authorization: `Bearer ${token}` }
     };
     useEffect(()=>{
-      axios.get(`https://friendly-29oc.onrender.com/users/${userId}`, config).then((result) => {
+      axios.get(`https://friendly-delta.vercel.app/users/${userId}`, config).then((result) => {
         setDataUser(result.data.user);
         setImageUser(result.data.user.image);
       }).catch((err) => {
@@ -138,7 +138,7 @@ function EditProfile() {
 
                 }, ()=>{
                   getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    axios.put(`https://friendly-29oc.onrender.com/users/${userId}`, {firstName, lastName,email, phoneNumber, image:`${downloadURL}`,bio},config).then((result) => {
+                    axios.put(`https://friendly-delta.vercel.app/users/${userId}`, {firstName, lastName,email, phoneNumber, image:`${downloadURL}`,bio},config).then((result) => {
                       navigate(-1)
                     }).catch((err) => {
                       console.error("Error =>", err);
@@ -148,7 +148,7 @@ function EditProfile() {
                   });
                 })
               }else{
-                  axios.put(`https://friendly-29oc.onrender.com/users/${userId}`, {firstName, lastName,email, phoneNumber, bio},config).then((result) => { 
+                  axios.put(`https://friendly-delta.vercel.app/users/${userId}`, {firstName, lastName,email, phoneNumber, bio},config).then((result) => { 
                     navigate(-1) 
                   }).catch((err) => { 
                     console.error("Error =>", err);

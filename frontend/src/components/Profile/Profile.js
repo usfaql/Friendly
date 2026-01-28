@@ -83,14 +83,14 @@ function convertDateFormat(dateString) {
   useEffect(()=>{
     if(localStorage.getItem("userIdG") && localStorage.getItem("userIdG")!== userId){
       setToId(localStorage.getItem("userIdG"));
-      axios.get(`https://friendly-29oc.onrender.com/users/${userId}`, config).then((result) => {
+      axios.get(`https://friendly-delta.vercel.app/users/${userId}`, config).then((result) => {
         setUserObject(result.data.user);
         setFollwing(result.data.user.following);
         setFollower(result.data.user.follower);
         }).catch((err) => {
           
         })
-        axios.get(`https://friendly-29oc.onrender.com/users/${localStorage.getItem("userIdG")}`, config).then((result) => {
+        axios.get(`https://friendly-delta.vercel.app/users/${localStorage.getItem("userIdG")}`, config).then((result) => {
           setNameUser(result.data.user.firstName + " "+ result.data.user.lastName);
           setImageUser(result.data.user.image);
           setLengthFollower(result.data.user.follower.length);
@@ -101,7 +101,7 @@ function convertDateFormat(dateString) {
           setBio(result.data.user.bio);
           setFollwingUsers(result.data.following);
           setFollowerUsers(result.data.user.follower);
-          axios.get(`https://friendly-29oc.onrender.com/posts/search_1/${localStorage.getItem("userIdG")}`,config).then((result) => {
+          axios.get(`https://friendly-delta.vercel.app/posts/search_1/${localStorage.getItem("userIdG")}`,config).then((result) => {
             result.data.posts.sort(compareDates);
             setDataPost(result.data.posts);
             setLengthPosts(result.data.posts.length);
@@ -116,7 +116,7 @@ function convertDateFormat(dateString) {
       }
     });
     }else{
-      axios.get(`https://friendly-29oc.onrender.com/users/${userId}`, config).then((result) => {
+      axios.get(`https://friendly-delta.vercel.app/users/${userId}`, config).then((result) => {
         setNameUser(result.data.user.firstName + " "+ result.data.user.lastName);
         setImageUser(result.data.user.image);
         setLengthFollower(result.data.user.follower.length);
@@ -128,7 +128,7 @@ function convertDateFormat(dateString) {
         setFollwingUsers(result.data.following)
         setFollowerUsers(result.data.follower);
         
-        axios.get(`https://friendly-29oc.onrender.com/posts/search_1/${userId}`,config).then((result) => {
+        axios.get(`https://friendly-delta.vercel.app/posts/search_1/${userId}`,config).then((result) => {
           result.data.posts.sort(compareDates);
           setDataPost(result.data.posts);
           setLengthPosts(result.data.posts.length);
@@ -211,7 +211,7 @@ const [maxWidth, setMaxWidth] = useState('100%');
     useEffect(()=>{
       setAllMessages([])
       if(toId){
-      axios.get(`https://friendly-29oc.onrender.com/users/message/${userId}/${toId}`, config).then((result)=>{
+      axios.get(`https://friendly-delta.vercel.app/users/message/${userId}/${toId}`, config).then((result)=>{
         setAllMessages(result.data.messages)
       }).catch((error)=>{
         console.error(error);
@@ -411,7 +411,7 @@ const [maxWidth, setMaxWidth] = useState('100%');
             {localStorage.getItem("userIdG") === userId ?<><div className={checkValue ? "btn-open-profile-night" : "btn-open-profile"} onClick={()=>{
               navigate("edit");
             }}>Edit Profile</div> <div className='btn-logout-profile' onClick={()=>{
-              axios.put(`https://friendly-29oc.onrender.com/users/${userId}/status`,{isOnline : false}, config).then((result) => {
+              axios.put(`https://friendly-delta.vercel.app/users/${userId}/status`,{isOnline : false}, config).then((result) => {
                 localStorage.clear();
                 navigate("/login");
               }).catch((err) => {
@@ -422,7 +422,7 @@ const [maxWidth, setMaxWidth] = useState('100%');
             </>  : <>
             <div style={{display:"flex"}}>
             {<div className={follwing.some(idUser => idUser._id === localStorage.getItem("userIdG")) ? "btn-open-profile" : "btn-open-follow"} style={{width:"100%"}} onClick={()=>{
-              axios.get(`https://friendly-29oc.onrender.com/users/${userId}/${localStorage.getItem("userIdG")}`, config)
+              axios.get(`https://friendly-delta.vercel.app/users/${userId}/${localStorage.getItem("userIdG")}`, config)
               .then((result) => {
                 if (follwing.some(idUser => idUser._id === localStorage.getItem("userIdG"))) {
                   const arrFollow = follwing.filter(idUser => idUser._id !== localStorage.getItem("userIdG"));
@@ -521,7 +521,7 @@ const [maxWidth, setMaxWidth] = useState('100%');
             </>  : <>
             <div style={{display:"flex"}}>
             {<div className={follwing.some(idUser => idUser._id === localStorage.getItem("userIdG")) ? "btn-open-profile" : "btn-open-follow"} style={{width:"100%"}} onClick={()=>{
-              axios.get(`https://friendly-29oc.onrender.com/users/${userId}/${localStorage.getItem("userIdG")}`, config)
+              axios.get(`https://friendly-delta.vercel.app/users/${userId}/${localStorage.getItem("userIdG")}`, config)
               .then((result) => {
                 if (follwing.some(idUser => idUser._id === localStorage.getItem("userIdG"))) {
                   const arrFollow = follwing.filter(idUser => idUser._id !== localStorage.getItem("userIdG"));
@@ -556,15 +556,15 @@ const [maxWidth, setMaxWidth] = useState('100%');
 
                
         const searchidPost = async()=>{
-          axios.get(`https://friendly-29oc.onrender.com/posts/${post._id}/like`,config).then((result) => {
+          axios.get(`https://friendly-delta.vercel.app/posts/${post._id}/like`,config).then((result) => {
             
               if(localStorage.getItem("userIdG") && localStorage.getItem("userIdG")!== userId){
-                axios.get(`https://friendly-29oc.onrender.com/users/${userId}`, config).then((result) => {
+                axios.get(`https://friendly-delta.vercel.app/users/${userId}`, config).then((result) => {
                   setFollwing(result.data.user.following);
                   }).catch((err) => {
                     
                   });
-                  axios.get(`https://friendly-29oc.onrender.com/posts/search_1/${localStorage.getItem("userIdG")}`,config).then((result) => {
+                  axios.get(`https://friendly-delta.vercel.app/posts/search_1/${localStorage.getItem("userIdG")}`,config).then((result) => {
                       result.data.posts.sort(compareDates);
                       setDataPost(result.data.posts);
                     }).catch((err) => {
@@ -572,7 +572,7 @@ const [maxWidth, setMaxWidth] = useState('100%');
                     });
                   
               }else{
-                  axios.get(`https://friendly-29oc.onrender.com/posts/search_1/${userId}`,config).then((result) => {
+                  axios.get(`https://friendly-delta.vercel.app/posts/search_1/${userId}`,config).then((result) => {
                     result.data.posts.sort(compareDates);
                     setDataPost(result.data.posts);
                   }).catch((err) => {
@@ -653,8 +653,8 @@ const [maxWidth, setMaxWidth] = useState('100%');
                             setEditAllow(true);
                         }}>Edit</button>
                         <button style={{border:"0", padding:"5px", backgroundColor:"#2a86ff",color:"white", borderRadius:"4px", cursor:"pointer"}} onClick={()=>{
-                            axios.delete(`https://friendly-29oc.onrender.com/posts/${post._id}/${post.author._id}` ,config).then((result) => {
-                              axios.get(`https://friendly-29oc.onrender.com/posts/search_1/${userId}`,config).then((result) => {
+                            axios.delete(`https://friendly-delta.vercel.app/posts/${post._id}/${post.author._id}` ,config).then((result) => {
+                              axios.get(`https://friendly-delta.vercel.app/posts/search_1/${userId}`,config).then((result) => {
                                 result.data.posts.sort(compareDates);
                                 setDataPost(result.data.posts);
                                 setLengthPosts(result.data.posts.length);
@@ -681,7 +681,7 @@ const [maxWidth, setMaxWidth] = useState('100%');
                 {editAllow &&  selectedPostId === post._id ? <> <input id={post._id} defaultValue={post.content} onChange={(e)=>{
                     setContentPostAfterEdit(e.target.value)
                 }} /> <button onClick={()=>{
-                    axios.put(`https://friendly-29oc.onrender.com/posts/${post._id}`, {content: contentPostAfterEdit}, config).then((result) => {
+                    axios.put(`https://friendly-delta.vercel.app/posts/${post._id}`, {content: contentPostAfterEdit}, config).then((result) => {
                         setModalVisible(false);
                         setEditAllow(false);
                     }).catch((err) => {
@@ -815,7 +815,7 @@ const [maxWidth, setMaxWidth] = useState('100%');
                       }}>Show</button>
                       : 
                       <button style={{padding:"5px", borderRadius:"4px", border:"0"}} onClick={()=>{
-                        axios.get(`https://friendly-29oc.onrender.com/users/${userId}/${e._id}`,config).then((result) => {                      
+                        axios.get(`https://friendly-delta.vercel.app/users/${userId}/${e._id}`,config).then((result) => {                      
                           if(i !== -1){
                           followingUsers.splice(i, 1);
                           setFollwingUsers([...followingUsers]);

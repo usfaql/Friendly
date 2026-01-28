@@ -14,12 +14,12 @@ function NavbarV() {
         headers: { Authorization: `Bearer ${token}`}
     };
     useEffect(()=>{
-        axios.get(`https://friendly-29oc.onrender.com/users/`, config).then((result) => {
+        axios.get(`https://friendly-delta.vercel.app/users/`, config).then((result) => {
             setAllUser(result.data.Users);
         }).catch((err) => {
             
         });
-    axios.get(`https://friendly-29oc.onrender.com/users/${userId}`, config).then((result) => {
+    axios.get(`https://friendly-delta.vercel.app/users/${userId}`, config).then((result) => {
         setFollowing(result.data.user.following);
         setFollower(result.data.user.follower);
         }).catch((err) => {

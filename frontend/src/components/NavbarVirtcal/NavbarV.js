@@ -20,7 +20,7 @@ function NavbarV() {
         headers: { Authorization: `Bearer ${token}` }
     };
     useEffect(()=>{
-        axios.get(`https://friendly-29oc.onrender.com/users/${userId}`, config).then((result) => {
+        axios.get(`https://friendly-delta.vercel.app/users/${userId}`, config).then((result) => {
             setNameUser(result.data.user.firstName + " "+ result.data.user.lastName);
             setImageUser(result.data.user.image);
             setLengthFollower(result.data.user.follower.length);
@@ -30,7 +30,7 @@ function NavbarV() {
             
         });
 
-        axios.get(`https://friendly-29oc.onrender.com/posts/search_1/${userId}`,config).then((result) => {
+        axios.get(`https://friendly-delta.vercel.app/posts/search_1/${userId}`,config).then((result) => {
           setLengthPosts(result.data.posts.length);
         }).catch((err) => {
           

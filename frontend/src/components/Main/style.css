@@ -1,0 +1,15 @@
+.main{
+    margin: 10px 0;
+    margin-bottom: 0;
+    display: flex;
+    text-align: center;
+    justify-content:center;
+}
+.mainNight{
+    margin: 10px 0;
+    margin-bottom: 0;
+    display: flex;
+    text-align: center;
+    justify-content:center;
+    background-color: #17181c;
+}

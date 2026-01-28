@@ -1,0 +1,202 @@
+.main-edit{
+    display:flex;
+    height:82.4vh;
+    flex-direction:row;
+    justify-content:center;
+    place-content:center;
+    padding: 50px;
+    user-select: none;
+}
+.contener-edit-profile{ 
+    align-items: center;
+    text-align: center;
+    place-content: center;
+    justify-content: center;
+    place-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgb(0, 0, 0, 0.1);
+    width: 50%;
+
+    min-height: fit-content;
+    max-height: fit-content;
+}
+
+.contener-info-edit-main{
+    display:flex;
+    place-items:center;
+    margin:20px;
+    margin-bottom: 0;
+    height: 35%;
+    justify-content:center;
+}
+
+.contener-info-edit{
+    display:flex;
+    place-items:center;
+    justify-content:space-between;
+    height:100%;
+    margin:20px;
+    width:75%;
+    flex-direction: column;
+}
+
+.img-name-info{
+    display:flex;
+     place-items:center;
+     justify-content:space-between;
+     gap:10px;
+}
+.contenter-image-add{
+    position: relative;
+    display: inline-block;
+}
+.image-profile{
+    width: 168px;
+    height: 168px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+
+
+.addImage{
+    position: absolute;
+    bottom: 3%;
+    right: 0; 
+    padding: 5px 10px;
+    background-color: #2a86ff; 
+    color: #fff; 
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+
+#fileInput[type="file"]{
+    display: none;
+}
+
+.custom-file-input {
+    display: inline-block;
+    position: absolute;
+    bottom: 3%;
+    right: 0; 
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .custom-file-input span {
+    position: absolute;
+    bottom: 3%;
+    right: 0; 
+    padding: 5px 10px;
+    background-color: #2a86ff; 
+    color: #fff; 
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+
+.addImage:hover{
+    background-color: #17181c;
+}
+
+.contenter-input{
+    display:flex;
+    flex-direction:column;
+    place-items:center;
+    gap:20px; 
+    justify-items:center;
+    justify-content:start;
+    margin-top: 10px;
+}
+
+.label-and-input{
+    min-height:20%;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    width: 45%;
+}
+.label{
+    text-align:start;
+    color:gray;
+    padding-left: 1%;
+}
+.input-edit{
+    border: 1px solid rgb(0, 0, 0,0.2);
+    border-radius: 4px;
+    height: 5vh;
+    margin: 1%;
+    width: 100%;
+    min-width: 100%;
+}
+
+
+
+.btn-open-profile-block{
+    border: none;
+    cursor:not-allowed;
+}
+
+.label-and-input-bio{
+    text-align: start;
+    margin-left: 10px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bio{
+    min-width: 70%;
+    max-width: 70%;
+    min-height: 50%;
+    max-height: 50%;
+    height: 20%;
+}
+.gg-add-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px
+ }
+ .gg-add-r::after,
+ .gg-add-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 5px;
+    top: 8px;
+    left: 4px
+ }
+ .gg-add-r::after {
+    width: 2px;
+    height: 10px;
+    top: 4px;
+    left: 8px
+ }
+
+ @media only screen and (max-width: 600px) {
+    .main-edit{
+        padding: 10px;
+    }
+    .contener-edit-profile{
+        width: 100%;
+    }
+    .label-and-input{
+        width: 70%;
+    }
+ }
